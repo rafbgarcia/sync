@@ -7,7 +7,10 @@ module Sync
         ::Pusher.app_id = Sync.app_id
         ::Pusher.key    = Sync.api_key
         ::Pusher.secret = Sync.auth_token
-        ::Pusher.cluster = Sync.config[:cluster]
+
+        if Sync.config[:cluster].present?
+          ::Pusher.cluster = Sync.config[:cluster]
+        end
 
         if Sync.pusher_api_scheme
           ::Pusher.scheme = Sync.pusher_api_scheme
