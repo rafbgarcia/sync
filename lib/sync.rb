@@ -52,7 +52,8 @@ module Sync
           pusher_ws_port: pusher_ws_port,
           pusher_wss_port: pusher_wss_port,
           pusher_encrypted: pusher_encrypted,
-          adapter: adapter
+          adapter: adapter,
+          cluster: config[:cluster],
         }.reject { |k, v| v.nil? }.to_json
       end
     end

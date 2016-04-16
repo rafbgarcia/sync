@@ -12,6 +12,7 @@ development:
 #   app_id: "YOUR_PUSHER_APP_ID"
 #   api_key: "YOUR_PUSHER_API_KEY"
 #   auth_token: "YOUR_PUSHER_SECRET"
+#   cluster: '' # Specify if your cluster is not the default
 #   adapter: "Pusher"
 #   async: true
 

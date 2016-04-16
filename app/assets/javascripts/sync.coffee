@@ -132,6 +132,7 @@ class Sync.Pusher extends Sync.Adapter
     opts.wsHost = SyncConfig.pusher_ws_host if SyncConfig.pusher_ws_host
     opts.wsPort = SyncConfig.pusher_ws_port if SyncConfig.pusher_ws_port
     opts.wssPort = SyncConfig.pusher_wss_port if SyncConfig.pusher_wss_port
+    opts.cluster = SyncConfig.cluster
 
     @client = new window.Pusher(SyncConfig.api_key, opts)
 
